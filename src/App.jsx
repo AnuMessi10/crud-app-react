@@ -27,7 +27,7 @@ const genderList = [
   }
 ]
 
-function App() {
+export default function App() {
 
   const [listItems, setListItems] = useState([]);
 
@@ -110,36 +110,15 @@ function App() {
       <form className='form' onSubmit={pushElement}>
         <div className="form-name">
           <AbcIcon id="input-icon" sx={{ fontSize: 40 }} />
-          <TextField
-            id="filled-basic-name"
-            label="Enter your name"
-            variant="filled"
-            required
-            fullWidth
-            placeholder="Joseph Menezes" />
+          <TextField id="filled-basic-name" label="Enter your name" variant="filled" required fullWidth placeholder="Joseph Menezes" />
         </div>
         <div className="form-age">
           <EscalatorWarningIcon id="input-icon" sx={{ fontSize: 35 }} />
-          <TextField
-            id="filled-basic-age"
-            label="Enter your age"
-            type="number"
-            variant="filled"
-            required
-            fullWidth
-            placeholder="15" />
+          <TextField id="filled-basic-age" label="Enter your age" type="number" variant="filled" required fullWidth placeholder="15" />
         </div>
         <div className="form-gender">
           <WcIcon id="input-icon" sx={{ fontSize: 35 }} />
-          <TextField
-            id="outlined-select-gender"
-            select
-            label="Choose your gender"
-            variant="filled"
-            required
-            fullWidth
-            value={genderValue.title}
-            onChange={(event) => setGenderValue(() => { return { title: event.target.value } })}>
+          <TextField id="outlined-select-gender" select label="Choose your gender" variant="filled" required fullWidth value={genderValue.title} onChange={(event) => setGenderValue(() => { return { title: event.target.value } })}>
             {genderList.map((gender) => (
               <MenuItem key={gender.id} value={gender.value}>
                 {gender.icon} {gender.value}
@@ -154,5 +133,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
