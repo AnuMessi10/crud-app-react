@@ -9,7 +9,6 @@ export default function ListItem(props) {
         <div className='list-item'>
             <Paper elevation={8} id="list-element">
                 <div className="list-details">
-                    <p><strong>ID: </strong>{props.id}</p>
                     <p><strong>Name: </strong>{props.name}</p>
                     <p><strong>Age: </strong>{props.age}</p>
                     <p><strong>Gender: </strong>{props.gender}</p>
