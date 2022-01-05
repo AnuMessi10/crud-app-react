@@ -3,7 +3,7 @@
   background-color: #84DFFF;
   height: 100vh;
 }
-.list, .form{
+.card, .form{
   width: 50%;
   margin: 1rem auto;
 }
@@ -18,14 +18,14 @@
   margin: auto 0.75rem;
 }
 
-#list-element{
+#card-element{
   margin: 1.5rem;
   padding: 0.75rem;
   display: grid;
   grid-template-columns: 2fr 1.1fr;
 }
 
-.list-btns Button{
+.card-btns Button{
   width: fit-content;
   margin: 0.3rem
 }

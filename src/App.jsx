@@ -111,7 +111,7 @@ export default function App() {
 
     return (
         <div className="App">
-            <div className="list">
+            <div className="card">
                 {
                     listItems.map((item) => {
                         return (

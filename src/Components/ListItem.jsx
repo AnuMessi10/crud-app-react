@@ -6,14 +6,14 @@ import DeleteIcon from '@mui/icons-material/Delete';
 export default function ListItem(props) {
 
     return (
-        <div className='list-item'>
-            <Paper elevation={8} id="list-element">
-                <div className="list-details">
+        <div className='card-item'>
+            <Paper elevation={8} id="card-element">
+                <div className="card-details">
                     <p><strong>Name: </strong>{props.name}</p>
                     <p><strong>Age: </strong>{props.age}</p>
                     <p><strong>Gender: </strong>{props.gender}</p>
                 </div>
-                <div className="list-btns">
+                <div className="card-btns">
                     <Button color="success" variant="contained" startIcon={<AddIcon />} onClick={() => props.getElement(props.id)}>Add It</Button>
                     <Button color="error" variant="contained" startIcon={<DeleteIcon />} onClick={() => props.deleteElement(props.id)}>Delete</Button>
                 </div>
