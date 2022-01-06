@@ -29,15 +29,18 @@ export default function App() {
 
     const pushElement = () => {
         // create ID for the new item to be added
-        setFormField(prevState => { return { ...prevState, id: Math.floor(Math.random() * 1000) } })
+        setFormField(() => {return {...formField, id: Math.floor(Math.random() * 1000)}})
 
         // add the item to the list
-        setCardItems((prevState) => { return [...prevState, formField] })
+        setCardItems([...cardItems, formField]);
     }
 
     // sets value of form as the clicked item
     const addIt = (ID: number) => {
-        setFormField(cardItems.filter(cardItem => cardItem.id === ID)[0]);
+        
+        const element = cardItems.find(cardItem => cardItem.id === ID);
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        element !== undefined ? setFormField(element) : null;
         setButtonText("Update");
     }
 
@@ -54,8 +57,8 @@ export default function App() {
 
     // handle form input fields using a single state
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setFormField(prevValue => {
-            return { ...prevValue, [event.target.name]: event.target.value }
+        setFormField(() => {
+            return { ...formField, [event.target.name]: event.target.value }
         })
     }
 

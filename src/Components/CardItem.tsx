@@ -7,7 +7,7 @@ type CardItemProps = {
     cardItem: {
         id: number,
         name: string,
-        age: number,
+        age: "" | number,
         gender: string
     },
     addIt: (id: number) => void,
