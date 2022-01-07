@@ -35,12 +35,12 @@ export default function App() {
         setCardItems([...cardItems, formField]);
     }
 
-    // sets value of form as the clicked item
+    // sets value of form input fields as the clicked item
     const addIt = (ID: number) => {
-        
         const element = cardItems.find(cardItem => cardItem.id === ID);
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        element !== undefined ? setFormField(element) : null;
+        element !== undefined ? setFormField(element) : console.log("Error, no card found");
+        
+        //change value of button text
         setButtonText("Update");
     }
 
