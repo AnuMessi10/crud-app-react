@@ -1,0 +1,31 @@
+.App{
+  display: flex;
+  background-color: #84DFFF;
+  height: 100vh;
+}
+.card, .form{
+  width: 50%;
+  margin: 1rem auto;
+}
+.form-name, .form-age, .form-gender, .form-btn{
+  display: flex;
+  width: 75%;
+  margin: 1.25rem auto;
+  justify-content: center;
+}
+
+#input-icon{
+  margin: auto 0.75rem;
+}
+
+#card-element{
+  margin: 1.5rem;
+  padding: 0.75rem;
+  display: grid;
+  grid-template-columns: 2fr 1.1fr;
+}
+
+.card-btns Button{
+  width: fit-content;
+  margin: 0.3rem
+}
