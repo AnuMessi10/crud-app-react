@@ -44,6 +44,7 @@ function App() {
   // update the clicked item
   const updateElement = (event: Parameters) => {
     dispatch(updateItem(event));
+    setButtonText("Add");
   }
 
   // delete the clicked item based on ID
